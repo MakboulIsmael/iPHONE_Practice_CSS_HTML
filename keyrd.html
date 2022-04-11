@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Ismael_MAQBOUL...</title>
+    <link href="resources/css/tailwind.css" rel="stylesheet" />
+    <link href="resources/css/code.css" rel="stylesheet" />
+    <link href="resources/fontawesome/css/all.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script src="js/>index.js"></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      style="
+        width: 400px;
+        height: 100px;
+        background-color: rgb(8, 54, 27);
+        bottom: -100px;
+      "
+      class="flex items-center justify-center"
+    >
+      <button
+        type="button"
+        style="
+          height: 30px;
+          width: 30px;
+          max-width: 99px;
+          margin: 3px;
+          border-radius: 4px;
+          border: none;
+          background: rgb(133, 136, 138);
+          color: white;
+          font-size: 1.05rem;
+          outline: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          vertical-align: top;
+          padding: 0;
+        
+        "
+        class=""
+      >a</button>
+      <button
+        type="button"
+        style="
+          height: 30px;
+          width: 30px;
+          max-width: 99px;
+          margin: 3px;
+          border-radius: 4px;
+          border: none;
+          background: rgb(133, 136, 138);
+          color: white;
+          font-size: 1.05rem;
+          outline: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          vertical-align: top;
+          padding: 0;
+          width: 12%;
+
+        "
+        class=""
+      ><i class="fas fa-backspace"></i></button>
+      <button
+        type="button"
+        style="
+          height: 30px;
+          width: 30px;
+          max-width: 99px;
+          margin: 3px;
+          border-radius: 4px;
+          border: none;
+          background: rgb(133, 136, 138);
+          color: white;
+          font-size: 1.05rem;
+          outline: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          vertical-align: top;
+          padding: 0;
+          width: 36%;
+
+        "
+        class="flex"
+      ><span class="material-icons">
+        space_bar
+        </span></button>
+        <button
+        type="button"
+        style="
+          height: 30px;
+          width: 30px;
+          max-width: 99px;
+          margin: 3px;
+          border-radius: 4px;
+          border: none;
+          background: rgb(133, 136, 138);
+          color: white;
+          font-size: 1.05rem;
+          outline: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 12%;
+          content: '';
+          top: 10px;
+          right: 10px;
+          border-radius: 5px;
+
+        "
+        class="flex mx-16"
+      ><span class="material-icons">
+        keyboard_capslock
+        </span></button>
+        <button
+        type="button"
+        style="
+          height: 30px;
+          width: 30px;
+          max-width: 99px;
+          margin: 3px;
+          border-radius: 4px;
+          border: none;
+          background: rgb(7, 16, 22);
+          color: white;
+          font-size: 1.05rem;
+          outline: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 12%;
+          content: '';
+          top: 10px;
+          right: 10px;
+          border-radius: 5px;
+
+        "
+        class="flex mx-16"
+      ><span class="material-icons">
+        check_circle
+        </span></button>
+    </div>
+    <script>
+        const keyboard = {
+            elements: {
+                main: null,
+                keysContainer: null,
+                keys: []
+            },
+
+            eventHandlers: {
+                oninput: null,
+                onclose: null
+            },
+
+            properties: {
+                value: "",
+                capslock: false
+
+            },
+
+            init() {
+                //create main element
+                this.elements.main = document.createElement("div");
+                this.elements.keysContainer = document.createElement("div");
+
+                //setup main elements
+                this.elements.main.classList.add("keyboard", "1keyboard--hidden");
+                this.elements.keysContainer.classList.add("keyboard", "1keyboard--hidden");
+                 
+                // Add to DOM
+                this.elements.main.appendChild(this.elements.keysContainer);
+                document.body.appendChild(this.elements.main);
+            },
+
+            createKeys() {
+                const fragment = document.createDocumentFragment();
+                const keyLayout = [
+                    "1","2","3","4","5","6","7","8","9","0","backspace",
+                    "q","w","e","r","t","y","u","i","o","p",
+                    "caps","a","s","d","f","g","h","j","k","l","enter",
+                    "done","z","x","c","v","b","n","m",",",".","?",
+                    "space"
+                ];
+
+                // creates HTML for an icon
+                const createIconHTML = (icon_name) => {
+                    retu
+                }
+                keyLayout.forEach(key => {
+                    const keyElement = document.createElement("button");
+                    const insertLineBreak = ["backspace", "p", "enter", "?"].indexOf(key) !== -1;
+
+                    // Add attributes/classes
+                    keyElement.setAttribute("type", "button");
+                    keyElement.classList.add("keyboard--key");
+                });
+            },
+
+            triggerEvent(handlerName) {
+                console.log("Event Triggered! Event Name: " , handlerName);
+            },
+             
+            toggleCapsLock() {
+                console.log("Caps Lock toggled");
+            },
+
+            open(initialValue, oninput, onclose) {
+
+            },
+            close() {
+
+            }
+        
+        };
+        window.addEvantListener("DOMContentLoaded", function(){
+            keyboard.init();
+        })
+    </script>
+  </body>
+</html>

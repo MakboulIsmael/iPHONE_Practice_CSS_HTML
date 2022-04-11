@@ -1,0 +1,21 @@
+.keyboard-extra-wide::after{
+    content: '';
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+}
+.keyboard {
+    width: 400px;
+    height: 100px;
+    background-color: rgb(8, 54, 27);
+    bottom: -100px;
+}
+
+.keyboard-hidden {
+    buttom: -100%;
+}
+.keyboard--keys {
+    items-align: center;
+}
